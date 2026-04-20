@@ -21,6 +21,10 @@ async function chamarAPI(texto) {
     digitando.id = 'digitando';
     document.getElementById("mensagem").appendChild(digitando);
 
+     let aviso = setTimeout(() => {
+        digitando.textContent = "Aguarde, o servidor está iniciando... (pode demorar até 50 segundos)";
+    }, 5000);
+
     const response = await fetch('http://127.0.0.1:3000/chat', {
         method: 'POST',
         headers: {
