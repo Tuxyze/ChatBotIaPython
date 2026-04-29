@@ -25,7 +25,7 @@ async function chamarAPI(texto) {
         digitando.textContent = "Aguarde, o servidor está iniciando... (pode demorar até 50 segundos)";
     }, 5000);
 
-    const response = await fetch('http://127.0.0.1:3000/chat', {
+    const response = await fetch('https://chatbotiapython.onrender.com/chat', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
